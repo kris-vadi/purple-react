@@ -1,6 +1,5 @@
 .button {
 	font-size: 1.6rem;
-	line-height: 1.5;
 	color: white;
 	background: var(--primary-color);
 	border-radius: 12px;
