@@ -1,0 +1,15 @@
+:root {
+	font-family: "Poppins", sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+	--title-color: #EBEEF5;
+	--primary-color: #7B6EF6;
+	--success-color: #37D8A7;
+	--warning-color: #FFAD49;
+	--content-color: #8E95A9;
+	--dark-background-color: #121829;
+}
+
+* {
+	box-sizing: border-box;
+}
