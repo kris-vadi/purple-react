@@ -8,11 +8,15 @@ function App() {
 	const title = 'Поиск';
 	const buttonText = 'Искать';
 	const innerText = 'Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.';
+	const size = 16;
 
 	return (
 		<>
 			<Title text={title} />
-			<Paragraph innerText={innerText}/>
+			<Paragraph 
+				innerText={innerText}
+				fontSize={size}
+			/>
 			<Button buttonText={buttonText}/>
 		</>
 	);
