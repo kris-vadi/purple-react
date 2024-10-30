@@ -1,7 +1,9 @@
 import './Paragraph.css';
 
-function Paragraph({innerText, fontSize = 16}) {
-	const fontStyle = `font-size: ${fontSize}px`;
+function Paragraph({innerText, fontSize}) {
+	const fontStyle = {
+		fontSize: fontSize
+	};
 
 	return (
 		<p className="paragraph" style={fontStyle}>{innerText}</p>

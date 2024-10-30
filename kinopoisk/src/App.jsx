@@ -8,7 +8,7 @@ function App() {
 	const title = 'Поиск';
 	const buttonText = 'Искать';
 	const innerText = 'Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.';
-	const size = 16;
+	const size = '16px';
 
 	return (
 		<>
