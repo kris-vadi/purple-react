@@ -1,5 +1,6 @@
 import Button from '../components/Button/Button';
 import Header from '../components/Header/Header';
+import Input from '../components/Input/Input';
 import Paragraph from '../components/Paragraph/Paragraph';
 import Title from '../components/Title/Title';
 import './Layout.css';
@@ -23,6 +24,9 @@ function Layout() {
 					innerText={innerText}
 					fontSize={size}
 				/>
+				<Input 
+					className={'input__search'}
+					placeholder={'Введите название'} />
 				<Button onClick={handleClick} buttonText={buttonText}/>
 			</div>
 		</>
