@@ -5,10 +5,14 @@ import Title from '../components/Title/Title';
 import './Layout.css';
 
 function Layout() {
+	const size = '16px';
 	const title = 'Поиск';
 	const buttonText = 'Искать';
 	const innerText = 'Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.';
-	const size = '16px';
+  
+	const handleClick = () => {
+		console.log('clicked');
+	};
 
 	return (
 		<>
@@ -19,7 +23,7 @@ function Layout() {
 					innerText={innerText}
 					fontSize={size}
 				/>
-				<Button buttonText={buttonText}/>
+				<Button onClick={handleClick} buttonText={buttonText}/>
 			</div>
 		</>
 	);
