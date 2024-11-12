@@ -1,10 +1,10 @@
-import './Logo.css';
+import './Login.css';
 
 function Login() {
 	return (
-		<a href="/" className="logo">
+		<a href="/" className="login">
 			Войти
-			<img src="../../public/logoogin.svg" alt="login icon" />
+			<img src="../../public/login.svg" alt="login icon" />
 		</a>
 	);
 }

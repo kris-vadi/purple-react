@@ -2,16 +2,18 @@
 	display: flex;
 	gap: 16px;
 	font-weight: 600;
+	margin-left: auto;
 }
 
 .menu__link {
 	color: #A8AEBF;
 	padding: 12px 16px;
 	font-size: 1.6rem;
+	text-decoration: none;
 	transition: var(--transition);
 }
 
 .menu__link:hover,
 .menu__link:active {
-	background-color: white;
+	color: white;
 }
