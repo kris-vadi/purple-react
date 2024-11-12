@@ -14,7 +14,8 @@
 	--success-color: #37D8A7;
 	--warning-color: #FFAD49;
 	--content-color: #8E95A9;
-	--dark-background-color: #121829;
+	--dark-background-color: rgba(18, 24, 41, 0.8);
+	--transition: all 0.3s ease-in-out;
 }
 
 * {

@@ -1,0 +1,17 @@
+.menu {
+	display: flex;
+	gap: 16px;
+	font-weight: 600;
+}
+
+.menu__link {
+	color: #A8AEBF;
+	padding: 12px 16px;
+	font-size: 1.6rem;
+	transition: var(--transition);
+}
+
+.menu__link:hover,
+.menu__link:active {
+	background-color: white;
+}
