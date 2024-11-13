@@ -1,27 +1,26 @@
-import CardList from '../components/CardList/CardList';
+// import CardList from '../components/CardList/CardList';
+import Auth from '../components/Auth/Auth';
 import Header from '../components/Header/Header';
-import Paragraph from '../components/Paragraph/Paragraph';
-import Search from '../components/Search/Search';
-import Title from '../components/Title/Title';
+// import Paragraph from '../components/Paragraph/Paragraph';
+// import Search from '../components/Search/Search';
+// import Title from '../components/Title/Title';
 import styles from './Layout.module.css';
 
 
 function Layout() {
-	const size = '16px';
-	const title = 'Поиск';
-	const innerText = 'Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.';
 
 	return (
 		<>
 			<Header />
 			<div className={styles['content']}>
-				<Title text={title} />
+				<Auth/>
+				{/* <Title text={'Поиск'} />
 				<Paragraph 
-					innerText={innerText}
-					fontSize={size}
+					innerText={'Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.'}
+					fontSize={16px}
 				/>
 				<Search />
-				<CardList />
+				<CardList /> */}
 			</div>
 		</>
 	);
