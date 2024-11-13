@@ -1,10 +1,11 @@
-import './Input.css';
+import styles from './Input.module.css';
+
 import cn from 'classnames';
 
 function Input({ type, className, placeholder, ...attrs}) {
 	const classes = cn(
-		'input',
-		 className
+		styles['input'],
+		styles[className]
 	);
 
 	return (

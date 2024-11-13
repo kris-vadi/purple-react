@@ -7,7 +7,7 @@
 	gap: 16px;
 }
 
-.card__img {
+.img {
 	border-radius: 12px;
 	width: 266px;
 	height: 400px;
@@ -15,11 +15,11 @@
 	position: relative;
 }
 
-.card__img img{
+.img img{
 	width: 100%;
 }
 
-.card__favorites-icon {
+.favorites-icon {
 	width: 24px;
 	height: 24px;
 	background-image: url('../../assets/icons/like.svg');
@@ -27,11 +27,11 @@
 	background-size: cover;
 }
 
-.card__title {
+.title {
 	color: var(--title-color);
 }
 
-.card__favorites {
+.favorites {
 	color: var(--primary-color);
 	font-weight: 600;
 	font-size: 1.6rem;
@@ -40,7 +40,7 @@
 	align-items: center;
 }
 
-.card__rating {
+.rating {
 	position: absolute;
 	font-size: 1.6rem;
 	background-color: rgba(0, 0, 0, 0.65);
@@ -54,7 +54,7 @@
 	left: 8px;
 }
 
-.card__star {
+.star {
 	width: 16px;
 	height: 16px;
 	background-image: url('../../assets/icons/star.svg');

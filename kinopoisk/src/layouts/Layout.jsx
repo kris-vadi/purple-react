@@ -3,7 +3,8 @@ import Header from '../components/Header/Header';
 import Paragraph from '../components/Paragraph/Paragraph';
 import Search from '../components/Search/Search';
 import Title from '../components/Title/Title';
-import './Layout.css';
+import styles from './Layout.module.css';
+
 
 function Layout() {
 	const size = '16px';
@@ -13,7 +14,7 @@ function Layout() {
 	return (
 		<>
 			<Header />
-			<div className="content">
+			<div className={styles['content']}>
 				<Title text={title} />
 				<Paragraph 
 					innerText={innerText}

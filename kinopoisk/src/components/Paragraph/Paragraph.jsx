@@ -1,4 +1,5 @@
-import './Paragraph.css';
+import styles from './Paragraph.module.css';
+
 
 function Paragraph({innerText, fontSize}) {
 	const fontStyle = {
@@ -6,7 +7,7 @@ function Paragraph({innerText, fontSize}) {
 	};
 
 	return (
-		<p className="paragraph" style={fontStyle}>{innerText}</p>
+		<p className={styles['paragraph']} style={fontStyle}>{innerText}</p>
 	);
 }
 

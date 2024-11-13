@@ -1,8 +1,9 @@
-import './Login.css';
+import styles from './Login.module.css';
+
 
 function Login() {
 	return (
-		<a href="/" className="login">
+		<a href="/" className={styles['login']}>
 			Войти
 			<img src="../../public/login.svg" alt="login icon" />
 		</a>
