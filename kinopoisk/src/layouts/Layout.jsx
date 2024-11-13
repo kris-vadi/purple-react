@@ -1,19 +1,14 @@
-import Button from '../components/Button/Button';
+import CardList from '../components/CardList/CardList';
 import Header from '../components/Header/Header';
-import Input from '../components/Input/Input';
 import Paragraph from '../components/Paragraph/Paragraph';
+import Search from '../components/Search/Search';
 import Title from '../components/Title/Title';
 import './Layout.css';
 
 function Layout() {
 	const size = '16px';
 	const title = 'Поиск';
-	const buttonText = 'Искать';
 	const innerText = 'Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.';
-  
-	const handleClick = () => {
-		console.log('clicked');
-	};
 
 	return (
 		<>
@@ -24,10 +19,8 @@ function Layout() {
 					innerText={innerText}
 					fontSize={size}
 				/>
-				<Input 
-					className={'input__search'}
-					placeholder={'Введите название'} />
-				<Button onClick={handleClick} buttonText={buttonText}/>
+				<Search />
+				<CardList />
 			</div>
 		</>
 	);

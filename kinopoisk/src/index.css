@@ -9,6 +9,8 @@
 	background-size: cover;
 	min-height: 100vh;
 	min-width: 100vw;
+	max-width: 1440px;
+	margin: 0 auto;
 	--title-color: #EBEEF5;
 	--primary-color: #7B6EF6;
 	--success-color: #37D8A7;
@@ -31,4 +33,14 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+}
+
+h2 {
+	font-size: 1.6rem;
+	font-weight: 600;
+	letter-spacing: 2%;
+}
+
+a {
+	text-decoration: none;
 }

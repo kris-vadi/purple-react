@@ -10,3 +10,7 @@
 .input::placeholder {
 		color: #475069;
 }
+
+.input_search {
+	padding-left: 56px;
+}
