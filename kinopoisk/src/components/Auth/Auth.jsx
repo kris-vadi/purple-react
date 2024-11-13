@@ -2,10 +2,11 @@ import Input from '../Input/Input';
 import Title from '../Title/Title';
 import Button from '../Button/Button';
 import styles from './Auth.module.css';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 function Auth() {
 	const [ inputData, setInputData ] = useState('');
+	const inputRef = useRef();
 
 	const inputChange = (event) => {
 		setInputData(event.target.value);
@@ -19,6 +20,7 @@ function Auth() {
 		};
 		localStorage.setItem('user', JSON.stringify(userState));
 		setInputData('');
+		inputRef.current.focus();
 	};
 
 	return (
@@ -29,7 +31,8 @@ function Auth() {
 					type={'text'}
 					placeholder={'Введите название'}
 					value={inputData}
-					onChange={inputChange}/>
+					onChange={inputChange}
+					ref = {inputRef} />
 				<Button
 					buttonText={'Войти в профиль'}/>
 			</form>
