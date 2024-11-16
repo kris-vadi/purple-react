@@ -1,0 +1,19 @@
+.search {
+	display: flex;
+	gap: 8px;
+	margin-top: 24px;
+}
+
+.search__input {
+	position: relative;
+}
+
+.search__input::before {
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 16px;
+	top: calc(50% - 12px);
+	background-image: url('../../../public/search.svg');
+}

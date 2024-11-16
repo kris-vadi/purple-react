@@ -1,0 +1,16 @@
+.input {
+	font-size: 1.4rem;
+	padding: 20px 16px;
+	border-radius: 12px;
+	border: 1px solid var(--border-color);
+	color: #475069;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.input::placeholder {
+		color: #475069;
+}
+
+.input_search {
+	padding-left: 56px;
+}
