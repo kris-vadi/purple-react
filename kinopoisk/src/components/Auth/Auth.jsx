@@ -2,24 +2,25 @@ import Input from '../Input/Input';
 import Title from '../Title/Title';
 import Button from '../Button/Button';
 import styles from './Auth.module.css';
-import { useRef, useState } from 'react';
+import { useContext, useRef } from 'react';
+import { UserContext } from '../../context/user.context';
 
 function Auth() {
-	const [ inputData, setInputData ] = useState('');
+	const { setCurrentUser } = useContext(UserContext);
 	const inputRef = useRef();
-
-	const inputChange = (event) => {
-		setInputData(event.target.value);
-	};
 
 	const autorize = (event) => {
 		event.preventDefault();
-		const userState = {
-			name: inputData,
+		const formData = new FormData(event.target);
+		const formProps = Object.fromEntries(formData);
+
+		const currentUserState = {
+			name: formProps.userName,
 			isLogined: true
 		};
-		localStorage.setItem('user', JSON.stringify(userState));
-		setInputData('');
+
+		console.log(currentUserState);
+		setCurrentUser(currentUserState);
 		inputRef.current.focus();
 	};
 
@@ -30,8 +31,7 @@ function Auth() {
 				<Input 
 					type={'text'}
 					placeholder={'Введите имя'}
-					value={inputData}
-					onChange={inputChange}
+					name = {'userName'}
 					ref = {inputRef} />
 				<Button
 					buttonText={'Войти в профиль'}/>

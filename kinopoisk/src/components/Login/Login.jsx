@@ -1,30 +1,29 @@
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
 import styles from './Login.module.css';
+import { UserContext, userInitialState } from '../../context/user.context';
 
 
 function Login() {
-	const [userState, setUserState] = useState('');
+	const { currentUser, setCurrentUser } = useContext(UserContext);
 
-	useEffect(() => {
-		const userStateInitial =  localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : '';
-		console.log(userStateInitial);
-		setUserState(userStateInitial);
-	}, []);
+	const logout = () => {
+		setCurrentUser(userInitialState);
+	};
 	
 	const isLogined = () => {
-		if (userState.isLogined) {
+		if (currentUser && currentUser.isLogined) {
 			return (<>
-				<div className={styles['login']}>{userState.name}<img src="../../public/user.svg" alt="login icon" /></div>
+				<div className={styles['login']}>{currentUser.name}<img src="../../public/user.svg" alt="login icon" /></div>
 				<div>Выйти</div>
 			</>);
 		} else {
-			return (<div className={styles['login']}>	Войти<img src="../../public/login.svg" alt="login icon" /></div>);
+			return (<div className={styles['login']} onClick={logout}>	Войти<img src="../../public/login.svg" alt="login icon" /></div>);
 		}
 	};
 
 	return (
 		<a href="/" className={styles['login']}>
-			{	isLogined()}
+			{isLogined()}
 		</a>
 	);
 }
