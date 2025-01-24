@@ -4,11 +4,11 @@
 	margin-top: 24px;
 }
 
-.search__input {
+.search-input {
 	position: relative;
 }
 
-.search__input::before {
+.search-input::before {
 	content: '';
 	position: absolute;
 	width: 24px;

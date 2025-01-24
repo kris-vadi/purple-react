@@ -1,15 +1,17 @@
-import './Input.css';
+import { forwardRef } from 'react';
+import styles from './Input.module.css';
+
 import cn from 'classnames';
 
-function Input({ type, className, placeholder, ...attrs}) {
+const Input = forwardRef(function Input({ type, className, placeholder, name, ...attrs}, ref) {
 	const classes = cn(
-		'input',
-		 className
+		styles['input'],
+		styles[className]
 	);
 
 	return (
-		<input type={type} className={classes} placeholder={placeholder} {...attrs}/>
+		<input type={type} className={classes} placeholder={placeholder} name={name} ref={ref} {...attrs}/>
 	);
-}
+});
 
 export default Input;

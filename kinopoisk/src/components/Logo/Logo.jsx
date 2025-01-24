@@ -1,8 +1,8 @@
-import './Logo.css';
+import styles from './Logo.module.css';
 
 function Logo() {
 	return (
-		<a href="/" className="logo">
+		<a href="/" className={styles['logo']}>
 			<img src="../../public/logo.svg" alt="logo kinopoisk" />
 		</a>
 	);

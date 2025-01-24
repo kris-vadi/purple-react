@@ -1,10 +1,10 @@
-import './Menu.css';
+import styles from './Menu.module.css';
 
 function Menu() {
 	return (
-		<nav className="menu">
-			<a href="/" className="menu__link">Поиск фильмов</a>
-			<a href="/" className="menu__link">Мои фильмы</a>
+		<nav className={styles['menu']}>
+			<a href="/" className={styles['link']}>Поиск фильмов</a>
+			<a href="/" className={styles['link']}>Мои фильмы</a>
 		</nav>
 	);
 }

@@ -5,12 +5,13 @@
 	border: 1px solid var(--border-color);
 	color: #475069;
 	background-color: rgba(0, 0, 0, 0.1);
+	min-width: 384px;
 }
 
 .input::placeholder {
 		color: #475069;
 }
 
-.input_search {
+.search {
 	padding-left: 56px;
 }

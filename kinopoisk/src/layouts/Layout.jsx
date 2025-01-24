@@ -1,28 +1,19 @@
-import CardList from '../components/CardList/CardList';
+import Auth from '../components/Auth/Auth';
 import Header from '../components/Header/Header';
-import Paragraph from '../components/Paragraph/Paragraph';
-import Search from '../components/Search/Search';
-import Title from '../components/Title/Title';
-import './Layout.css';
+import { UserContextProvider } from '../context/user.context';
+import styles from './Layout.module.css';
+
 
 function Layout() {
-	const size = '16px';
-	const title = 'Поиск';
-	const innerText = 'Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.';
 
 	return (
-		<>
+		<UserContextProvider>
 			<Header />
-			<div className="content">
-				<Title text={title} />
-				<Paragraph 
-					innerText={innerText}
-					fontSize={size}
-				/>
-				<Search />
-				<CardList />
+			<div className={styles['content']}>
+				<Auth/>
 			</div>
-		</>
+		</UserContextProvider>
+
 	);
 }
 

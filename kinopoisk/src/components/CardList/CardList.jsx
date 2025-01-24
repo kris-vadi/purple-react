@@ -1,10 +1,10 @@
 import { filmsData } from '../../store/filmsLData';
 import Card from '../Card/Card';
-import './CardList.css';
+import styles from './CardList.module.css';
 
 function CardList() {
 	return (
-		<div className="card-list">
+		<div className={styles['list']}>
 			{
 				filmsData.map((film) => (
 					<Card

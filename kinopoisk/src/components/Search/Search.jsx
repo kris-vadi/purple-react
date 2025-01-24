@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
-import './Search.css';
+import styles from './Search.module.css';
+
 
 function Search() {
 	const [ inputData, setInputData ] = useState('');
+	const inputRef = useRef();
 
 	const inputChange = (event) => {
 		setInputData(event.target.value);
@@ -15,17 +17,19 @@ function Search() {
 		const formData = new FormData(event.target);
 		const formProps = Object.fromEntries(formData);
 		console.log(formProps);
+		inputRef.current.focus();
 	};
 
 	return (
-		<form className="search" onSubmit={startSearch}>
-			<div className="search__input">
+		<form className={styles['search']} onSubmit={startSearch}>
+			<div className={styles['search-input']}>
 				<Input 
 					type={'text'}
-					className={'input_search'}
+					className={'search'}
 					placeholder={'Введите название'}
 					value={inputData}
-					onChange={inputChange} />
+					onChange={inputChange} 
+					ref={inputRef} />
 			</div>
 			<Button
 				buttonText={'Искать'}/>
