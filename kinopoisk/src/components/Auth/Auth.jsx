@@ -29,7 +29,7 @@ function Auth() {
 			<form className={styles['auth']} onSubmit={autorize}>
 				<Input 
 					type={'text'}
-					placeholder={'Введите название'}
+					placeholder={'Введите имя'}
 					value={inputData}
 					onChange={inputChange}
 					ref = {inputRef} />

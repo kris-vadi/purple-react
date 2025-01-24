@@ -2,5 +2,6 @@
 	background-color: var(--header-background);
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding: 20px 120px;
 }
