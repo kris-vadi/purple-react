@@ -19,8 +19,8 @@ function Auth() {
 			isLogined: true
 		};
 
-		console.log(currentUserState);
 		setCurrentUser(currentUserState);
+		inputRef.current.value = '';
 		inputRef.current.focus();
 	};
 
